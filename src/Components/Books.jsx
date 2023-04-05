@@ -2,12 +2,14 @@ import React from "react";
 import { useLinkClickHandler, useLoaderData } from "react-router-dom";
 
 const Books = () => {
-  const booksData = useLoaderData();
-  console.log(booksData);
+  const { books } = useLoaderData();
+  console.log(books);
 
   return (
-    <div>
-      <h1>This is book page</h1>
+    <div className="my-container">
+      <h1 className="mx-5 text-red-500 text-center font-semibold lg:text-2xl">
+        Total Available Books: {books.length}
+      </h1>
     </div>
   );
 };
