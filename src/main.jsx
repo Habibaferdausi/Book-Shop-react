@@ -7,6 +7,7 @@ import Home from "./Components/Home";
 import About from "./Components/About";
 import Books from "./Components/Books";
 import BookDetails from "./Components/BookDetails";
+import Loading from "./Components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,12 @@ const router = createBrowserRouter([
         element: <About></About>,
       },
 
+
+      {
+        path:"loader",
+        element:<Loading></Loading>
+      }
+      ,
       {
         path: "book/:id",
         element: <BookDetails></BookDetails>,

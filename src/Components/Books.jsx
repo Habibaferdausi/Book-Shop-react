@@ -1,8 +1,16 @@
 import React from "react";
-import { useLinkClickHandler, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import Book from "./Book";
+import Loading from "./Loading";
 
 const Books = () => {
+
+  const navigation = useNavigation();
+  console.log(navigation.state);
+  if (navigation.state === "loading") {
+    return <Loading></Loading>;
+  }
+
   const { books } = useLoaderData();
   console.log(books);
 
