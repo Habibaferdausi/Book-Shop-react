@@ -1,5 +1,7 @@
 import React from "react";
 import Lottie from "lottie-react";
+import reader from "../assets/reader.json";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -13,7 +15,7 @@ const Home = () => {
           </div>
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
             A reader lives a <br className="hidden md:block" /> thousand lives{" "}
-            <span className="inline-block text-blue-400">before he dies</span>
+            <span className="inline-block text-red-500">before he dies</span>
           </h2>
           <p className="text-base text-gray-700 md:text-lg">
             Books are a uniquely portable magic. Books serve to show a man that
@@ -30,7 +32,7 @@ const Home = () => {
           </Link>
           <Link
             to="/about"
-            className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-blue-700"
+            className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-red-500"
           >
             Learn More
           </Link>
